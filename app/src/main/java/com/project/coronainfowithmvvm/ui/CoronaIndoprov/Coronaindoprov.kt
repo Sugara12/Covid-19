@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 import com.project.coronainfowithmvvm.R
 import com.project.coronainfowithmvvm.ui.CoronaGlobal.CoronaGlobalViewModel
-import com.project.coronainfowithmvvm.ui.CoronaGlobal.adapter.WordlAdapter
+import com.project.coronainfowithmvvm.ui.CoronaGlobal.adapter.WorldAdapter
 import com.project.coronainfowithmvvm.ui.CoronaGlobal.data.WorldData
 import com.project.coronainfowithmvvm.ui.CoronaIndoprov.adapter.ProvAdapter
 import com.project.coronainfowithmvvm.ui.CoronaIndoprov.data.Provinsi

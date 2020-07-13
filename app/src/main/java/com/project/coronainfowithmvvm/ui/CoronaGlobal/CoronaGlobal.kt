@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 import com.project.coronainfowithmvvm.R
-import com.project.coronainfowithmvvm.ui.CoronaGlobal.adapter.WordlAdapter
+import com.project.coronainfowithmvvm.ui.CoronaGlobal.adapter.WorldAdapter
 import com.project.coronainfowithmvvm.ui.CoronaGlobal.data.WorldData
 import kotlinx.android.synthetic.main.corona_global_fragment.*
 
@@ -29,7 +29,7 @@ class CoronaGlobal : Fragment() {
 
     private lateinit var viewModel: CoronaGlobalViewModel
     private lateinit var list : RecyclerView
-    private var wordlAdapter: WordlAdapter? = null
+    private var worldAdapter: WorldAdapter? = null
     private var worldDatalist : ArrayList<WorldData>? = null
     lateinit var cari : EditText
 
@@ -44,8 +44,8 @@ class CoronaGlobal : Fragment() {
         val layoutManager = LinearLayoutManager(requireContext())
         list.setLayoutManager(layoutManager)
         worldDatalist = ArrayList()
-        wordlAdapter = WordlAdapter(worldDatalist)
-        list.adapter = wordlAdapter
+        worldAdapter = WorldAdapter(worldDatalist)
+        list.adapter = worldAdapter
 
          return root
     }
@@ -57,7 +57,7 @@ class CoronaGlobal : Fragment() {
 
         cari.addTextChangedListener(object : TextWatcher {
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                wordlAdapter!!.filter.filter(p0.toString())
+                worldAdapter!!.filter.filter(p0.toString())
             }
             override fun afterTextChanged(p0: Editable?) {
             }
@@ -81,7 +81,7 @@ class CoronaGlobal : Fragment() {
     private fun showDataGlobal(data: List<WorldData>) {
         worldDatalist?.clear()
         worldDatalist?.addAll(data)
-        wordlAdapter?.notifyDataSetChanged()
+        worldAdapter?.notifyDataSetChanged()
     }
 
 

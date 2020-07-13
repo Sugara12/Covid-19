@@ -15,8 +15,8 @@ import java.text.DecimalFormat
 import java.util.*
 import kotlin.collections.ArrayList
 
-class WordlAdapter(private val data : List<WorldData>?) :
-    RecyclerView.Adapter<WordlAdapter.MyHolder>(),
+class WorldAdapter(private val data : List<WorldData>?) :
+    RecyclerView.Adapter<WorldAdapter.MyHolder>(),
     Filterable {
 
     var dataFileter : List<WorldData>?
